@@ -22,7 +22,7 @@ enum {Front, Back};
 
 #define PIDfrequency 1000
 #define PWMfrequency 2000
-#define QEIfrequency 10
+#define QEIfrequency 40
 #define motorDirectionRegister GPIO_PORTF_BASE
 #define Motor1 GPIO_PIN_2
 #define Motor2 GPIO_PIN_3
