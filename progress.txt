@@ -1,0 +1,5 @@
+11th June, 2016 - Commencing experiments on RPM Calculator
+12th June, 2016 - Concluded fluctuations in RPM w.r.t. QEI frequency
+13th June, 2016 - Comparision of Kiel code and CCS code about QEI fluctuation
+		- PWM vs RPM (tachometer and QEI) at 10Hz and 40Hz plots
+		- Going to start experiments with PWM frequency for a linear RPM vs PWM plot 
