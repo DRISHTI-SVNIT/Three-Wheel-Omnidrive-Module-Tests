@@ -1,0 +1,13 @@
+.\objects\init.o: ..\Common\init.c
+.\objects\init.o: ..\Common\tm4c123gh6pm.h
+.\objects\init.o: C:\Keil_v5\ARM\Pack\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm4.h
+.\objects\init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\init.o: C:\Keil_v5\ARM\Pack\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h
+.\objects\init.o: C:\Keil_v5\ARM\Pack\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h
+.\objects\init.o: C:\Keil_v5\ARM\Pack\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h
+.\objects\init.o: C:\Keil_v5\ARM\Pack\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmSimd.h
+.\objects\init.o: C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h
+.\objects\init.o: ..\Common\PLL.h
+.\objects\init.o: ..\Common\SysTick.h
+.\objects\init.o: ..\Common\UART.h
+.\objects\init.o: ..\Common\init.h
