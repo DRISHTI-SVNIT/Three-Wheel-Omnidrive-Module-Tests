@@ -4,3 +4,7 @@
 		- PWM vs RPM (tachometer and QEI) at 10Hz and 40Hz plots
 		- Going to start experiments with PWM frequency for a linear RPM vs PWM plot 
 		- Completed experiment on affect of PWM frequency on PWM vs RPM plot
+14th June, 2016 - Commenced experiments on motor characteristics.
+		- Coupled a dc motor to pedestal bearing and used it as a dc generator to supply load to motor
+		- Plotted graphs and analaysed the data and concluded in the Excel Sheet
+15th June, 2016 - Commencing hysteresis study and reviewing all experiments
