@@ -8,3 +8,4 @@
 		- Coupled a dc motor to pedestal bearing and used it as a dc generator to supply load to motor
 		- Plotted graphs and analaysed the data and concluded in the Excel Sheet
 15th June, 2016 - Commencing hysteresis study and reviewing all experiments
+		- Retested RPM vs PWM plots
