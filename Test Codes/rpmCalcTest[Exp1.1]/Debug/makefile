@@ -128,32 +128,32 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-rpmCalcTest.out \
+rpmCalcTest[Exp1.1].out \
 
 EXE_OUTPUTS__QUOTED += \
-"rpmCalcTest.out" \
+"rpmCalcTest[Exp1.1].out" \
 
 BIN_OUTPUTS += \
-rpmCalcTest.hex \
+rpmCalcTest[Exp1.1].hex \
 
 BIN_OUTPUTS__QUOTED += \
-"rpmCalcTest.hex" \
+"rpmCalcTest[Exp1.1].hex" \
 
 
 # All Target
-all: rpmCalcTest.out
+all: rpmCalcTest[Exp1.1].out
 
 # Tool invocations
-rpmCalcTest.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+rpmCalcTest[Exp1.1].out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"rpmCalcTest.map" --stack_size=512 --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --warn_sections --diag_wrap=off --display_error_number --xml_link_info="rpmCalcTest_linkInfo.xml" --rom_model -o "rpmCalcTest.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi -z -m"rpmCalcTest[Exp1.1].map" --stack_size=512 --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="rpmCalcTest[Exp1.1]_linkInfo.xml" --rom_model -o "rpmCalcTest[Exp1.1].out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-rpmCalcTest.hex: $(EXE_OUTPUTS)
+rpmCalcTest[Exp1.1].hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armhex"  -o "rpmCalcTest.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armhex"  -o "rpmCalcTest[Exp1.1].hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
