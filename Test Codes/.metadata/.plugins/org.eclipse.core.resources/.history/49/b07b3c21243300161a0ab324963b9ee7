@@ -12,24 +12,24 @@ int main(void) {
 	qeiInit();
 	pwmInit();
 	UART_TransmitString("Up and running\r",0);
-	/*long maxPWM = SysCtlClockGet()/PWMfrequency;
+	long maxPWM = SysCtlClockGet()/PWMfrequency;
 	UART_OutDec(maxPWM,0);
-	UARTCharPut(UART0_BASE,0x0D);*/
+	UARTCharPut(UART0_BASE,0x0D);
 	int rpm,i;
 	//	timerInit();
 	while(1) {
-	//	for(i = 0; i <= maxPWM; i+=12) {
-	//		setPWM(i);
-	//		SysCtlDelay(5*40000000);
+		for(i = 0; i <= maxPWM; i+=12) {
+			setPWM(i);
+			SysCtlDelay(5*40000000);
 			rpm = calculateRPM();
 			UART_OutDec(rpm,0);
-			UARTCharPut(UART0_BASE,0x0D);
-	//		SysCtlDelay(40000000);
-	//	}
-	//	setPWM(0);
-	//	break;
+			UARTCharPut(UART0_BASE,',');
+			SysCtlDelay(40000000);
+		}
+		setPWM(0);
+		break;
 	}
-	//UART_TransmitString("\rEnd",0);
+	UART_TransmitString("\rEnd",0);
 }
 
 void Timer0IntHandler(void) {
