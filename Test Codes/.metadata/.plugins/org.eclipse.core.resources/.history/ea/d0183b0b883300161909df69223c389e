@@ -1,0 +1,16 @@
+/*
+ * movingArray.c
+ *
+ *  Created on: Jun 16, 2016
+ *      Author: Aniket
+ */
+#include "movingArray.h"
+
+int frequency;
+
+void movingArrayInit(int frequency_) {
+	frequency = frequency_;
+}
+
+
+

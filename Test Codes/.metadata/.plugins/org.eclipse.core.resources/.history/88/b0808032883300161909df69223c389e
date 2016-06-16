@@ -1,0 +1,12 @@
+/*
+ * movingArray.c
+ *
+ *  Created on: Jun 16, 2016
+ *      Author: Aniket
+ */
+#include "movingArray.h"
+
+float movingArray[];
+
+
+

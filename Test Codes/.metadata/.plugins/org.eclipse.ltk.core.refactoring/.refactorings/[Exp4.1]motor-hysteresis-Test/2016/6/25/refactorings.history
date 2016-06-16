@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;motor-hysteresis-Test[Exp4.1]/userLib/movingArray&apos; to &apos;movingArray.h&apos;" description="Rename resource &apos;movingArray&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="userLib/movingArray" name="movingArray.h" stamp="1466056784731" updateReferences="true"/>
+</session>

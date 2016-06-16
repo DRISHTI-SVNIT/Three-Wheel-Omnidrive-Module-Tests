@@ -13,11 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="pwm" key="selection"/>
+		<item value="A" key="selection"/>
 		<list key="findhistory">
+			<item value="Front"/>
+			<item value="Back"/>
+			<item value="QEI"/>
 			<item value="PWM"/>
 		</list>
 		<list key="replacehistory">
+			<item value="A"/>
+			<item value="B"/>
 		</list>
 	</section>
 </section>
