@@ -1,2 +1,6 @@
 1465843927397	Rename resource 'rpm-pwm-linearTest'
 1465843937522	Rename resource 'rpmCalcTest'
+1466022050373	Delete 3 resources
+1466082668608	Rename resource 'motor-hysteresis-Test[Exp4.1]'
+1466082679317	Rename resource 'rpm-pwm-linearTest[Exp1.2]'
+1466082688567	Rename resource 'rpmCalcTest[Exp1.1]'

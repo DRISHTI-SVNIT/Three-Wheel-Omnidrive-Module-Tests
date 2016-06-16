@@ -1,0 +1,8 @@
+#ifndef movingArray
+#define movingArray
+
+#define mvArrayFrequency 10
+
+float movingArrayOut(float newElement);
+
+#endif

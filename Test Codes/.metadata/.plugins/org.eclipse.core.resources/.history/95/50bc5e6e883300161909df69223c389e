@@ -1,0 +1,16 @@
+/*
+ * movingArray.c
+ *
+ *  Created on: Jun 16, 2016
+ *      Author: Aniket
+ */
+#include "movingArray.h"
+
+float movingArray[movingArrayFrequency];
+float sum = 0;
+
+float movingArrayOut(float in) {
+
+	return out;
+}
+
