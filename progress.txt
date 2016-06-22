@@ -9,3 +9,4 @@
 		- Plotted graphs and analaysed the data and concluded in the Excel Sheet
 15th June, 2016 - Commencing hysteresis study and reviewing all experiments
 		- Retested RPM vs PWM plots
+16th June, 2016 - Updated Code for the two wheel controlling Tiva. Added a control loop to third wheel on which hysteresis will be studied.
