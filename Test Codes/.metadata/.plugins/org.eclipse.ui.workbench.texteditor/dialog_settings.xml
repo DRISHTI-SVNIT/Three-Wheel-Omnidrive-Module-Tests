@@ -13,15 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="UART" key="selection"/>
+		<item value="PWMGe" key="selection"/>
 		<list key="findhistory">
+			<item value="PWMGe"/>
+			<item value="GPIOIntRe"/>
+			<item value="GPIOInt"/>
 			<item value="UART"/>
 			<item value="Motor2"/>
 			<item value="Motor1"/>
 			<item value="Front"/>
 			<item value="Back"/>
-			<item value="QEI"/>
-			<item value="PWM"/>
 		</list>
 		<list key="replacehistory">
 			<item value="C2"/>

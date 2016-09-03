@@ -1,7 +1,0 @@
-#ifndef movingArray
-#define movingArray
-
-void movingArrayInit(int frequency);
-float movingArrayOut(float newElement);
-
-#endif
