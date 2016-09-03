@@ -129,32 +129,32 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-motor-hysteresis-Test[Exp4.1].out \
+[Exp4.1]motor-hysteresis-Test.out \
 
 EXE_OUTPUTS__QUOTED += \
-"motor-hysteresis-Test[Exp4.1].out" \
+"[Exp4.1]motor-hysteresis-Test.out" \
 
 BIN_OUTPUTS += \
-motor-hysteresis-Test[Exp4.1].hex \
+[Exp4.1]motor-hysteresis-Test.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"motor-hysteresis-Test[Exp4.1].hex" \
+"[Exp4.1]motor-hysteresis-Test.hex" \
 
 
 # All Target
-all: motor-hysteresis-Test[Exp4.1].out
+all: [Exp4.1]motor-hysteresis-Test.out
 
 # Tool invocations
-motor-hysteresis-Test[Exp4.1].out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+[Exp4.1]motor-hysteresis-Test.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi -z -m"motor-hysteresis-Test[Exp4.1].map" --stack_size=512 --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="motor-hysteresis-Test[Exp4.1]_linkInfo.xml" --rom_model -o "motor-hysteresis-Test[Exp4.1].out" $(ORDERED_OBJS)
+	"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi -z -m"[Exp4.1]motor-hysteresis-Test.map" --stack_size=512 --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="[Exp4.1]motor-hysteresis-Test_linkInfo.xml" --rom_model -o "[Exp4.1]motor-hysteresis-Test.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-motor-hysteresis-Test[Exp4.1].hex: $(EXE_OUTPUTS)
+[Exp4.1]motor-hysteresis-Test.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armhex"  -o "motor-hysteresis-Test[Exp4.1].hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armhex"  -o "[Exp4.1]motor-hysteresis-Test.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 

@@ -19,6 +19,7 @@
 #include "driverlib/qei.h"
 
 enum {A, B};
+extern int32_t maxPWM, minPWM;
 
 #define PIDfrequency 200
 #define PWMfrequency 2000
@@ -35,5 +36,6 @@ unsigned absolute(int x);
 void UART_TransmitString(char* string,int i);
 void UART_OutDec(int x, int i);
 void GraphPlot0(int data1, int data2, int data3, int data4);
+void GraphPlot1(int data1, int data2, int data3, int data4);
 
 #endif

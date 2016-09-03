@@ -1,6 +1,11 @@
 #include "common.h"
 
 void setPWM(int pwm,int i) {
+	if(pwm > maxPWM) {
+		pwm = maxPWM;
+	} else if(pwm < -maxPWM) {
+		pwm = -maxPWM;
+	}
 	if(i == A) {
 		if(pwm > 0) {
 			GPIOPinWrite(motorDirectionRegister,A1|A2,0x02);
@@ -28,7 +33,7 @@ void setPWM(int pwm,int i) {
 
 int calculateRPM(int i) {
 	if(i == A) {
-		int rpm = (-QEIVelocityGet(QEI0_BASE)*QEIDirectionGet(QEI0_BASE))*QEIfrequency;
+		int rpm = (QEIVelocityGet(QEI0_BASE)*QEIDirectionGet(QEI0_BASE))*QEIfrequency;
 		float RPM = rpm * 0.015;
 		return RPM;
 	} else if(i == B) {
@@ -156,4 +161,19 @@ void GraphPlot0(int data1, int data2, int data3, int data4){
 	UARTCharPut(UART0_BASE,(((int)data3 & 0xFF00) >> 8));
 	UARTCharPut(UART0_BASE,(int)data4 & 0x00FF);
 	UARTCharPut(UART0_BASE,(((int)data4 & 0xFF00) >> 8));
+}
+
+void GraphPlot1(int data1, int data2, int data3, int data4){
+	UARTCharPut(UART1_BASE,0xAB);
+	UARTCharPut(UART1_BASE,0xCD);
+	UARTCharPut(UART1_BASE,0x08);
+	UARTCharPut(UART1_BASE,0x00);
+	UARTCharPut(UART1_BASE,(int)data1 & 0x00FF);
+	UARTCharPut(UART1_BASE,(((int)data1 & 0xFF00) >> 8));
+	UARTCharPut(UART1_BASE,(int)data2 & 0x00FF);
+	UARTCharPut(UART1_BASE,(((int)data2 & 0xFF00) >> 8));
+	UARTCharPut(UART1_BASE,(int)data3 & 0x00FF);
+	UARTCharPut(UART1_BASE,(((int)data3 & 0xFF00) >> 8));
+	UARTCharPut(UART1_BASE,(int)data4 & 0x00FF);
+	UARTCharPut(UART1_BASE,(((int)data4 & 0xFF00) >> 8));
 }
