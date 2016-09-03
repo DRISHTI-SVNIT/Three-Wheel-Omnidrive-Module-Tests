@@ -1,0 +1,41 @@
+
+**** Build of configuration Debug for project blink ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../main.c'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.2.111/" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+'Finished building: ../main.c'
+' '
+'Building file: ../tm4c123gh6pm_startup_ccs.c'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="tm4c123gh6pm_startup_ccs.d"  "../tm4c123gh6pm_startup_ccs.c"
+'Finished building: ../tm4c123gh6pm_startup_ccs.c'
+' '
+'Building target: blink.out'
+'Invoking: ARM Linker'
+"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi -z -m"blink.map" --stack_size=512 --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --display_error_number --warn_sections --diag_wrap=off --xml_link_info="blink_linkInfo.xml" --rom_model -o "blink.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a   ../libdriver.a 
+<Linking>
+error #16004-D: file "../libdriver.a<gpio.o>" has a Tag_ABI_VFP_args attribute value of "1" that is different than one previously seen ("0"); combining incompatible files
+warning #16032-D: object files have incompatible wchar_t types ("../libdriver.a<gpio.o>" = --wchar_t=32, "./main.obj" = --wchar_t=16)
+error #16004-D: file "../libdriver.a<interrupt.o>" has a Tag_ABI_VFP_args attribute value of "1" that is different than one previously seen ("0"); combining incompatible files
+warning #16032-D: object files have incompatible wchar_t types ("../libdriver.a<interrupt.o>" = --wchar_t=32, "./main.obj" = --wchar_t=16)
+error #16004-D: file "../libdriver.a<sysctl.o>" has a Tag_ABI_VFP_args attribute value of "1" that is different than one previously seen ("0"); combining incompatible files
+warning #16032-D: object files have incompatible wchar_t types ("../libdriver.a<sysctl.o>" = --wchar_t=32, "./main.obj" = --wchar_t=16)
+error #16004-D: file "../libdriver.a<cpu.o>" has a Tag_ABI_VFP_args attribute value of "1" that is different than one previously seen ("0"); combining incompatible files
+warning #16032-D: object files have incompatible wchar_t types ("../libdriver.a<cpu.o>" = --wchar_t=32, "./main.obj" = --wchar_t=16)
+warning #10247-D: creating output section ".text.GPIODirModeSet" without a SECTIONS specification
+warning #10247-D: creating output section ".text.GPIOPadConfigSet" without a SECTIONS specification
+warning #10247-D: creating output section ".text.GPIOPinWrite" without a SECTIONS specification
+warning #10247-D: creating output section ".text.GPIOPinTypeGPIOOutput" without a SECTIONS specification
+warning #10247-D: creating output section ".text.SysCtlPeripheralEnable" without a SECTIONS specification
+warning #10247-D: creating output section ".text.SysCtlDelay" without a SECTIONS specification
+warning #10247-D: creating output section ".text.SysCtlClockSet" without a SECTIONS specification
+error #10010: errors encountered during linking; "blink.out" not built
+
+>> Compilation failure
+makefile:141: recipe for target 'blink.out' failed
+gmake: *** [blink.out] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
